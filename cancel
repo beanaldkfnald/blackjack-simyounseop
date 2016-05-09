@@ -1,0 +1,69 @@
+import java.util.Scanner;
+public class blackjackk{
+
+  public static void main(String[] args){   
+    Scanner in = new Scanner(System.in);
+    int human_total = play_human();
+    int computer_total = play_computer();
+    int human_mon() = computer_mon();
+    calculate_winner(human_total, computer_total);
+   }
+   
+  //Don't change this line
+  public static int play_human(){
+  
+    Scanner in = new Scanner(System.in);
+    
+    int human_money = 10$;
+    int human_card1 = (int)(Math.random()*11)+1;
+    int human_card2 = (int)(Math.random()*11)+1;
+    int human_total = human_card1 + human_card2;
+    System.out.println("Human player got");
+    System.out.println(human_card1+" and "+human_card2);
+    System.out.println((0~10)$, human battng);
+
+    for(int i=0; i<3; i=i+1){
+      System.out.println("Do you want another card (Y/N)");
+      String s = in.nextLine();
+      if(s.equals("N")){
+        break;
+      }
+   
+        if(s.equals("Y")){
+        human_total = human_total + (int)(Math.random()*11)+1;
+        System.out.println("new human_total "+ human_total);
+        
+    
+     }
+        
+    }
+    return human_total;
+  }
+  
+  
+  public static int play_computer(){
+    Soanner in = new Soanner(System. in);
+    int computer_money = 10$;
+    int computer_card1 = (int)(Math.random()*11)+1;
+    int computer_card2 = (int)(Math.random()*11)+1;
+    int computer_total = computer_card1 + computer_card2;
+    System.out.println("Computer player got");
+    System.out.println(computer_card1+" and "+computer_card2);
+    System.out.println("new Computer_total "+ computer_total);
+    System.out.println((0~10)$, computer battng);
+    
+    return computer_total;
+  }
+  
+  
+  
+  public static calculate_winnner(int human_total, int computer_total){
+    if(human_total<=21 && computer_total<human_total){
+      System.out.println("Human Wins");
+    }
+    else {
+      System.out.println("Computer Wins");
+    }
+
+  }
+  }
